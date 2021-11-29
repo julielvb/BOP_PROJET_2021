@@ -1,3 +1,5 @@
+# PyCharm : file > settings > Project: [name] > Python Interpreter > click '+' and search "Pillow" or "exif" or "piexif"
+
 from PIL import Image
 from PIL.ExifTags import TAGS
 
