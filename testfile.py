@@ -1,3 +1,5 @@
+# PyCharm : file > settings > Project: [name] > Python Interpreter > click '+' and search "Pillow" or "exif" or "piexif"
+
 import piexif
 
 image_name = '[name].JPG'
