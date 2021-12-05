@@ -31,11 +31,12 @@ def encode():
         global imagee
 
         fileopen = StringVar()
-        fileopen = askopenfilename(initialdir="/Desktop", title="sélectionner un fichier", filetypes=(("jpeg,png files", "*jpg *png"), ("all files", "*.*")))
+        fileopen = askopenfilename(initialdir="/Desktop", title="sélectionner un fichier",
+                                   filetypes=(("jpeg,png files", "*jpg *png"), ("all files", "*.*")))
         imagee = ImageTk.PhotoImage(Image.open(fileopen))
 
         Labelimg = Label(image=imagee)
-        Labelimg.place(relx=0.3, rely=0.3, height=400, width=400)
+        Labelimg.place(relx=0.3, rely=0.3, height=200, width=200)
 
     Button2 = Button(text="Ouvrir un fichier", command=openfile)
     Button2.place(relx=0.3, rely=0.2, height=31, width=94)
@@ -127,7 +128,7 @@ def decode():
         Labelpath.place(relx=0.6, rely=0.25, height=21, width=450)
 
         Labelimg = Label(image=imagee)
-        Labelimg.place(relx=0.3, rely=0.3, height=400, width=400)
+        Labelimg.place(relx=0.3, rely=0.3, height=200, width=200)
 
     def deimg():
         if secimg.get() == "png":
