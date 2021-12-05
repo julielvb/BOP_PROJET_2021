@@ -34,7 +34,8 @@ def encode():
         fileopen = askopenfilename(initialdir="/Desktop", title="sélectionner un fichier",
                                    filetypes=(("jpeg,png files", "*jpg *png"), ("all files", "*.*")))
         imagee = ImageTk.PhotoImage(Image.open(fileopen))
-
+        Labelpath = Label(text=fileopen)
+        Labelpath.place(relx=0.3, rely=0.25, height=21, width=450)
         Labelimg = Label(image=imagee)
         Labelimg.place(relx=0.3, rely=0.3, height=200, width=200)
 
