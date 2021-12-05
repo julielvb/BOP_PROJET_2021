@@ -126,8 +126,7 @@ def decode():
 
         imagee = ImageTk.PhotoImage(Image.open(fileopen))
         Labelpath = Label(text=fileopen)
-        Labelpath.place(relx=0.6, rely=0.25, height=21, width=450)
-
+        Labelpath.place(relx=0.3, rely=0.25, height=21, width=450)
         Labelimg = Label(image=imagee)
         Labelimg.place(relx=0.3, rely=0.3, height=200, width=200)
 
@@ -139,7 +138,7 @@ def decode():
             messag = aaa.reveal(fileopen)
 
         Label2 = Label(text=messag)
-        Label2.place(relx=0.7, rely=0.7, height=21, width=204)
+        Label2.place(relx=0.3, rely=0.7, height=21, width=204)
 
     Button2 = Button(text="Ouvrir un fichier", command=openfile)
     Button2.place(relx=0.3, rely=0.2, height=31, width=94)
