@@ -17,6 +17,7 @@ from argparse import FileType
 def encode():
     main.destroy()
     enc = Tk()
+    enc.title('ENCODAGE DU MESSAGE')
     enc.geometry('1000x1000')
     enc.resizable(width=True, height=True)
     fontl = tkFont.Font(family='Arial', size=32)
@@ -100,6 +101,7 @@ def encode():
 def decode():
     main.destroy()
     dec = Tk()
+    dec.title('DECODAGE DU MESSAGE')
     dec.geometry('1000x1000')
     dec.resizable(width=True, height=True)
     dec.wm_attributes('-transparentcolor')
@@ -160,7 +162,7 @@ encbutton = Button(text='CACHER UN MESSAGE', fg="white", bg="black", width=25, c
 encbutton['font'] = fontl
 encbutton.place(relx=0.3, rely=0.1)
 
-decbutton = Button(text='REVELER UN MESSAGE', fg="white", bg="black", width=25, command=decode)
+decbutton = Button(text='DECODER UN MESSAGE', fg="white", bg="black", width=25, command=decode)
 decbutton['font'] = fontl
 decbutton.place(relx=0.3, rely=0.25)
 
