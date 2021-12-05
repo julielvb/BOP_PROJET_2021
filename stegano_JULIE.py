@@ -127,7 +127,7 @@ def decode():
     def deimg():
         messag = lsb.reveal(fileopen)
         Label2 = Label(text=messag, bg='ivory')
-        Label2.place(relx=0.3, rely=0.55, height=21, width=204)
+        Label2.place(relx=0.3, rely=0.6, height=21, width=200)
 
     Button2 = Button(text="Ouvrir un fichier", command=openfile)
     Button2.place(relx=0.3, rely=0.2, height=31, width=94)
