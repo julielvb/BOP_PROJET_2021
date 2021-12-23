@@ -12,6 +12,8 @@ from stegano import exifHeader as aaa
 import os
 from subprocess import Popen
 from argparse import FileType
+from hachoir.parser import createParser
+from hachoir.metadata import extractMetadata
 
 # fonction pour encoder un message dans une image
 def encode():
