@@ -148,6 +148,55 @@ def decode():
 
     dec.mainloop()
 
+#FONCTION METADATA
+def metadata():
+    main.destroy()
+    mtdt = Tk()
+    mtdt.title('AFFICHER LES METADONNEES')
+    mtdt.geometry('1000x1000')
+    mtdt.resizable(width=True, height=True)
+    mtdt.wm_attributes('-transparentcolor')
+    fontl = tkFont.Font(family='Arial', size=32)
+    label1 = Label(mtdt)
+    label1.pack()
+
+    LabelTitle = Label(text="METADONNEES", bg="black", fg="white", width=20)
+    LabelTitle['font'] = fontl
+    LabelTitle.place(relx=0.3, rely=0.1)
+
+    def openfile():
+        global fileopen
+        global imagee
+        fileopen = StringVar()
+        fileopen = askopenfilename(initialdir="/Desktop", title="select file",
+                                   filetypes=(("jpeg files, png file", "*jpg *png"), ("all files", "*.*")))
+
+        imagee = ImageTk.PhotoImage(Image.open(fileopen))
+        Labelpath = Label(text=fileopen, bg='ivory')
+        Labelpath.place(relx=0.3, rely=0.25, height=21, width=450)
+        Labelimg = Label(image=imagee)
+        Labelimg.place(relx=0.3, rely=0.3, height=200, width=200)
+        parser = createParser(fileopen)
+        # extraction des métadonnées
+        metadata = extractMetadata(parser)
+        # affichage des métadonnées
+        Labelpath = Label(text=metadata, bg='ivory', justify=LEFT)
+        Labelpath.place(relx=0.3, rely=0.55, height=300, width=250)
+
+    Button2 = Button(text="Ouvrir un fichier", command=openfile)
+    Button2.place(relx=0.3, rely=0.2, height=31, width=94)
+
+    def back():
+        mtdt.destroy()
+        # execfile('image steganography using lsb.py')
+        # os.system('python imagesteganographyusinglsb.py')
+        Popen('python steganography.py')
+
+    Buttonback = Button(text="QUITTER", command=back)
+    Buttonback.place(relx=0.4, rely=0.2, height=31, width=94)
+
+    mtdt.mainloop()
+
 # PROGRAMME PRINCIPAL
 main = Tk()
 main.title('STEGANOGRAPHIE')
@@ -166,7 +215,7 @@ decbutton = Button(text='DECODER UN MESSAGE', fg="white", bg="black", width=25, 
 decbutton['font'] = fontl
 decbutton.place(relx=0.3, rely=0.25)
 
-metabutton = Button(text='AFFICHER METADONNEES', fg="white", bg="black", width=25)
+metabutton = Button(text='AFFICHER METADONNEES', fg="white", bg="black", width=25, command=metadata)
 metabutton['font'] = fontl
 metabutton.place(relx=0.3, rely=0.4)
 
