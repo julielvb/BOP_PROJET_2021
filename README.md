@@ -8,5 +8,6 @@ Le projet, entièrement fait en Python, doit permettre à un utilisateur de pouv
 Le fichier Python doit être utilisable en mode console mais aussi en mode graphique.
 
 
-## Utilisation
+## Écriture 
 Le programme a entièrement été fait sur PyCharm 2021.2.3 sous Windows 10.
+
