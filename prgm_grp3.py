@@ -183,7 +183,7 @@ def metadata():
         metadata = extractMetadata(parser)
         # affichage des métadonnées
         Labelpath = Label(text=metadata, bg='ivory', justify=LEFT)
-        Labelpath.place(relx=0.3, rely=0.55, height=300, width=250)
+        Labelpath.place(relx=0.3, rely=0.6, height=250, width=250)
 
     Button2 = Button(text="Ouvrir un fichier", command=openfile)
     Button2.place(relx=0.3, rely=0.2, height=31, width=94)
