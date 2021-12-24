@@ -3,6 +3,7 @@ from stegano import lsb
 secret = lsb.hide("kaiju.png", "Hello mama")
 secret.save("kaiju_secret.png")
 clear_message = lsb.reveal("kaiju_secret.png")
+print("Message caché avec succès.")
 print(clear_message)
 
 # mode terminal
